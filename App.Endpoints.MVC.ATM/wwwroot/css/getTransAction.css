@@ -1,0 +1,41 @@
+﻿.transaction-list {
+    background: #ffffff; /* پس‌زمینه سفید لیست */
+    padding: 40px; /* پدینگ داخلی */
+    border-radius: 10px; /* گوشه‌های گرد کادر */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 90%; /* عرض لیست */
+    max-width: 800px; /* حداکثر عرض */
+    text-align: center; /* مرکز قرار دادن متن */
+    border: 2px solid #9b59b6; /* حاشیه بنفش */
+    overflow-x: auto; /* نمایش افقی در صورت نیاز */
+}
+
+    .transaction-list h2 {
+        margin-bottom: 20px;
+        color: #9b59b6; /* رنگ متن بنفش */
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* حذف فاصله بین سلول‌ها */
+    margin: auto; /* مرکز قرار دادن جدول */
+}
+
+th, td {
+    padding: 15px; /* پدینگ سلول‌ها */
+    text-align: center; /* مرکز قرار دادن متن سلول‌ها */
+    border-bottom: 1px solid #ddd; /* خط زیرین */
+}
+
+th {
+    background-color: #9b59b6; /* رنگ پس‌زمینه سرستون‌ها */
+    color: white; /* رنگ متن سرستون‌ها */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* رنگ پس‌زمینه ردیف‌های زوج */
+}
+
+tr:hover {
+    background-color: #f5f5f5; /* رنگ پس‌زمینه ردیف‌ها در حالت هاور */
+}

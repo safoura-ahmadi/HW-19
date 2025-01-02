@@ -1,0 +1,29 @@
+﻿@using App.Domain.Core.ATM.Cards.Entitiy
+@model Card
+@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+
+}
+<style>
+    body {
+        background-image: linear-gradient(180deg, #b7a2c0, white)
+    }
+</style>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert"> @TempData["ErrorMessage"] </div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert"> @TempData["SuccessMessage"] </div>
+}
+<div class="transfer-form">
+    <h2>انتقال وجه</h2>
+    <form method="post" asp-controller="TransAction" asp-action="TransferMoney">
+        <input disabled type="text" name="sourceCardNumber" placeholder="شماره کارت مبدا" value="@Model.Number" required>
+        <input type="password" name="password" placeholder="رمز عبور" required>
+        <input type="text" name="destinationCardNumber" placeholder="شماره کارت مقصد" required>
+        <input type="number" name="money" step="0.01" placeholder="مبلغ" required>
+        <button type="submit">ادامه</button>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+﻿@using App.Domain.Core.ATM.Cards.Entitiy
+@model Card
+@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+<style>
+    body {
+        background-image: linear-gradient(180deg, #b7a2c0, white)
+    }
+</style>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger " role="alert"> @TempData["ErrorMessage"] </div>
+}
+<div class="login-form">
+    <h2>موجودی</h2>
+    <form>
+        <input  type="text" placeholder="شماره کارت" value="@Model.Number" disabled />
+       
+        <input type="text" placeholder="رمز عبور" value="@Model.Balance" disabled />
+    </form>
+</div>

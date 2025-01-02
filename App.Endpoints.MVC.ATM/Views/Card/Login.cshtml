@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml"; 
+    
+}
+<style>
+ body{
+        background-image: linear-gradient(180deg, #b7a2c0, white)
+    }
+</style>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger " role="alert"> @TempData["ErrorMessage"] </div>
+}
+<div class="login-form">
+    <h2>ورود به حساب کاربری</h2>
+    <form method="post" asp-asp-controller="Card" asp-action="LoginCard">
+        <input class="form-control" name="cardNumber" type="text" placeholder="شماره کارت" required />
+        <input class="form-control" name="password" type="password" placeholder="رمز عبور" required />
+        <button type="submit">ورود</button>
+    </form>
+</div>

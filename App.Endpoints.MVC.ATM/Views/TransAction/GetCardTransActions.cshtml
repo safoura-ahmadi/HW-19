@@ -1,0 +1,35 @@
+﻿@using App.Domain.Core.ATM.TransActions.Dto
+@model List<TransActionDto>
+@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+
+}
+<style>
+    body {
+        background-image: linear-gradient(180deg, #b7a2c0, white)
+    }
+</style>
+<div class="transaction-list">
+    <h2>لیست انتقال‌های بانکی</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>شماره کارت مبدا</th>
+                <th>شماره کارت مقصد</th>
+                <th>مبلغ</th>
+                <th>وضعیت تراکنش</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SourceCardNumber</td>
+                    <td>@item.DestinationCardNUmber</td>
+                    <td>@item.Amount</td>
+                    <td>@(item.IsSuccessful ? "موفق" : "ناموفق")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

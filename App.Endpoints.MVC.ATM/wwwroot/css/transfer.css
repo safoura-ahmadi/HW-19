@@ -1,0 +1,56 @@
+﻿.transfer-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 450px;
+    text-align: center;
+    border: 2px solid #9b59b6;
+}
+
+    .transfer-form h2 {
+        margin-bottom: 20px;
+        color: #9b59b6;
+    }
+
+    .transfer-form input {
+        font-family: Lalezar, Arial, sans-serif;
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        direction: rtl;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+        .transfer-form input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .transfer-form input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .transfer-form input::placeholder {
+            font-family: Lalezar, Arial, sans-serif;
+            color: #888;
+        }
+
+    .transfer-form button {
+        font-family: Lalezar, Arial, sans-serif;
+        width: calc(100% - 20px); /* تنظیم عرض دکمه با پدینگ */
+        padding: 10px;
+        background-color: #9b59b6; /* رنگ پس‌زمینه دکمه بنفش */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-sizing: border-box; /* شامل کردن پدینگ در عرض کلی */
+    }
+
+        .transfer-form button:hover {
+            background-color: #8e44ad; /* رنگ پس‌زمینه دکمه در حالت هاور بنفش تیره‌تر */
+        }

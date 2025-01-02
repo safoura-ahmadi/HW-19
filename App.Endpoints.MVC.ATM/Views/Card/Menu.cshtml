@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+
+}
+<style>
+    body {
+        background-image: linear-gradient(180deg, #b7a2c0, white);
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert"> @TempData["SuccessMessage"] </div>
+}
+<div class="navbar">
+
+    <a asp-controller="Card" asp-action="Index">خروج</a>
+    <a asp-controller="Card" asp-action="ChangePassword">تغییر رمز</a>
+    <a asp-controller="Card" asp-action="GetInformation">موجودی</a>
+    <a asp-controller="TransAction" asp-action="GetCardTransActions">تاریخچه انتقال</a>
+    <a asp-controller="TransAction" asp-action="Transfer">کارت به کارت</a>
+    
+</div>
+
+

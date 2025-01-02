@@ -1,0 +1,47 @@
+﻿body {
+    background-image: linear-gradient(180deg, #9b58b6, white);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #8e44ad;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 12px 20px;
+        margin: 0 10px;
+        background-color: transparent;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+        .navbar a:hover {
+            background-color: white;
+            color: #8e44ad;
+            transform: scale(1.1);
+        }
+
+.content {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white;
+    color: #8e44ad;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .content h1 {
+        font-size: 36px;
+        color: #8e44ad;
+    }

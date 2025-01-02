@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> @ViewData["Title"]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Lalezar&display=swap"
+          rel="stylesheet" />
+    @if (ViewBag.CssFile != null)
+    {
+        <link rel="stylesheet" type="text/css" href="~/css/@ViewBag.CssFile" />
+    }
+    <style>
+        body {
+            font-family: Lalezar, Arial, sans-serif;
+            background: linear-gradient(to right, #e0e0e0, #f5f5f5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

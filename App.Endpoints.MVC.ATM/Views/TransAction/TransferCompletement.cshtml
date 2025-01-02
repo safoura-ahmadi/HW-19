@@ -1,0 +1,30 @@
+﻿@model TransferMoneyMv
+@{
+    Layout = "~/Views/Shared/_NewLayout.cshtml";
+
+}
+<style>
+    body {
+        background-image: linear-gradient(180deg, #b7a2c0, white)
+    }
+</style>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert"> @TempData["ErrorMessage"] </div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert"> @TempData["SuccessMessage"] </div>
+}
+<div class="transfer-form">
+    <h2>انتقال وجه</h2>
+    <form method="post" asp-controller="TransAction" asp-action="CardTransferCompletement">
+        <input type="hidden" name="CodeGenerateTime" placeholder="تاریخ انقضا" value="@Model.CodeGenerateTime" required>
+        <input readonly type="text" name="SourceCardNumber" placeholder="شماره کارت مبدا" value="@Model.SourceCardNumber" required>
+        <input readonly type="text" name="DestinationCardNumber" placeholder="شماره کارت مقصد" value="@Model.DestinationCardNumber" required>
+        <input readonly type="text" name="DestinationHolderName" placeholder="نام صاحب کارت مقصد" value="@Model.DestinationHolderName" required>
+        <input readonly type="number" name="Money" step="0.01" placeholder="مبلغ" value="@Model.Money" required>
+        <input type="text"  name="Code" placeholder="کد امنیتی" required>
+        <button type="submit">انتقال</button>
+    </form>
+</div>
